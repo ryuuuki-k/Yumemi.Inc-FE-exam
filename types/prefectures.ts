@@ -1,3 +1,5 @@
+export type PrefCode = `${Prefectures['result'][number]['prefCode']}`;
+
 export interface Prefectures {
   message: null;
   result: [
@@ -191,6 +193,3 @@ export interface Prefectures {
     }
   ];
 }
-
-export type PrefCode = `${Prefectures['result'][number]['prefCode']}`;
-
