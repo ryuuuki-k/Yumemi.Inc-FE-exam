@@ -1,4 +1,4 @@
-import { PrefCode } from './prefectures';
+import { PrefCode, Prefectures } from './prefectures';
 
 export interface Population {
   message: null;
@@ -24,11 +24,12 @@ export interface Population {
   };
 }
 
-export type TotalPopulation = {
+export type TotalPopulationInfo = {
   label: string;
   data: {
     year: number;
     value: number;
   }[];
   prefCode: PrefCode;
+  prefName: Prefectures['result'][number]['prefName'];
 };
