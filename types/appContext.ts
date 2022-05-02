@@ -1,9 +1,10 @@
-import { TotalPopulation } from './population';
-import { PrefCode } from './prefectures';
+import { TotalPopulationInfo } from './population';
+import { PrefCode, Prefectures } from './prefectures';
 
 export type AppContext = {
   selectPrefs: PrefCode[];
   setSelectPrefs: React.Dispatch<React.SetStateAction<PrefCode[]>>;
-  populationData: TotalPopulation[];
-  setPopulationData: React.Dispatch<React.SetStateAction<TotalPopulation[]>>;
+  populationData: TotalPopulationInfo[];
+  setPopulationData: React.Dispatch<React.SetStateAction<TotalPopulationInfo[]>>;
+  prefectures: Prefectures['result'] | undefined;
 };
